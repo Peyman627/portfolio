@@ -1,1 +1,8 @@
-This is the blog portion
+<h1>Peyman's Blog</h1>
+
+
+{% for blog in blogs %}
+<h2>{{ blog.title }}</h2>
+<br>
+<p>{{ blog.content }}</p>
+{% endfor %}
