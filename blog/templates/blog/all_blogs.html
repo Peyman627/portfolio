@@ -1,11 +1,12 @@
 <h1>Peyman's Blog</h1>
 
+<h2>Peyman has written {{ blogs.count }} blog{{ blogs.count | pluralize }}</h2>
 
 {% for blog in blogs %}
 <a href="{% url 'blog:detail' blog.id %}">
     <h2>{{ blog.title }}</h2>
 </a>
 <br>
-<p>{{ blog.content }}</p>
-<h4>{{ blog.date }}</h4>
+<p>{{ blog.content| striptags | truncatechars:100 }}</p>
+<h4>{{ blog.date | date:'M d Y' | upper }}</h4>
 {% endfor %}

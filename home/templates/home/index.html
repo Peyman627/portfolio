@@ -1,9 +1,11 @@
 <h1>Peyman's Portfolio</h1>
+<a href="{% url 'blog:all_blogs' %}">Blogs</a>
+<br>
 
 {% load static %}
 <img src="{% static 'home/pier_dock_sea_dusk_shore_118549_2560x1440.jpg' %}" alt="">
 
-<a href="{% static 'home/exam6.pdf' %}">Exam</a>
+<a href="{% static 'home/exam.pdf' %}">Exam</a>
 
 {% for project in projects %}
 <h2>{{ project.title }}</h2>
