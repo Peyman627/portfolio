@@ -1,3 +1,6 @@
+{% extends 'home/base.html' %}
+
+{% block 'content' %}
 <h1>Peyman's Portfolio</h1>
 <a href="{% url 'blog:all_blogs' %}">Blogs</a>
 <br>
@@ -16,3 +19,4 @@
 {% endif %}
 
 {% endfor %}
+{% endblock %}

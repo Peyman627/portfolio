@@ -1,3 +1,6 @@
+{% extends 'home/base.html' %}
+
+{% block 'content' %}
 <h1>Peyman's Blog</h1>
 
 <h2>Peyman has written {{ blogs.count }} blog{{ blogs.count | pluralize }}</h2>
@@ -10,3 +13,4 @@
 <p>{{ blog.content| striptags | truncatechars:100 }}</p>
 <h4>{{ blog.date | date:'M d Y' | upper }}</h4>
 {% endfor %}
+{% endblock %}
